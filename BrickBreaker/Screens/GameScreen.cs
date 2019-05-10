@@ -269,7 +269,7 @@ namespace BrickBreaker
                     break;
                 }
                     //delete power up if it goes off the screen
-                    if (p.y > paddle.y + 30)
+                    if (p.y > paddle.y + 50)
                     {
                         powers.Remove(powers[0]);
                         break;
@@ -417,7 +417,7 @@ namespace BrickBreaker
             }
             catch
             {
-                Form1.ChangeScreen(this, "NameScreen");
+                OnEnd();
                 brickReader = XmlReader.Create("Resources/Level1.xml");
             }
 
